@@ -1,19 +1,17 @@
-assistant: Were there specific topics or concepts that you struggled with? 
-user: hi 
 assistant: Did you find the material challenging? 
-user: yes, but i am sure what kind of  material they are giving 
-assistant: How did you prepare for the exam? 
-user: maa chudda
-assistant: How did you prepare for the exam? 
-user: meh for one 1 hour, but you know what gand maara
-assistant: Did you ask questions when you were unsure about something? 
-user: yolo ek baar
-assistant: Did you ask questions when you were unsure about something? 
-user: yes, i did but teacher didnt respond or wwas too ignorant 
-assistant: Were there any resources that you found particularly helpful or unhelpful? 
-user: nope 
-assistant: Were there any resources that you found particularly helpful or unhelpful? 
-user: nope 
+user: yes i did find it very challenged
+assistant: Did you use any specific study methods or techniques? 
+user: dsfjissdf
+assistant: How much time did you dedicate to studying? 
+user: hardly 1 hour
+assistant: How much time did you dedicate to studying? 
+user: hardly much time and not well
+assistant: Were you actively engaged in class discussions and activities? 
+user: not really
+assistant: Were you actively engaged in class discussions and activities? 
+user: ASJDIAOJDA
+assistant: Were you actively engaged in class discussions and activities? 
+user: yes i was 
 assistant: Did you use additional resources, such as textbooks, online materials, or tutoring? 
-user: no 
+user: yes i did alot of study
 assistant: Thanks for you valuable Time. 
