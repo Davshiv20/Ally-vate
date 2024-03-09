@@ -1,0 +1,9 @@
+assistant: Did you find the material challenging? 
+user: yes i did, it was not easy for me
+assistant: How did you prepare for the exam? 
+user: i did not
+assistant: Were you actively engaged in class discussions and activities? 
+user: no
+assistant: Were there any resources that you found particularly helpful or unhelpful? 
+user: no
+assistant: Thanks for you valuable Time. 
