@@ -1,9 +1,21 @@
+assistant: Were there specific topics or concepts that you struggled with? 
+user: uhguv
 assistant: Did you find the material challenging? 
-user: yes i did, it was not easy for me
+user: maa chuda
+assistant: Did you find the material challenging? 
+user: naruto
+assistant: Did you find the material challenging? 
+user: dragonball
+assistant: Did you feel adequately prepared for the exam? 
+user: yes
 assistant: How did you prepare for the exam? 
-user: i did not
-assistant: Were you actively engaged in class discussions and activities? 
-user: no
+user: using vtp
+assistant: How did you prepare for the exam? 
+user: using khan academy
+assistant: How much time did you dedicate to studying? 
+user: i prepared using teacher's notes and class material
+assistant: Did you ask questions when you were unsure about something? 
+user: I did ask but the teacher was stupid
 assistant: Were there any resources that you found particularly helpful or unhelpful? 
-user: no
+user: i did not go to the class
 assistant: Thanks for you valuable Time. 

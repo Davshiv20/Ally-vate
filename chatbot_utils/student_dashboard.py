@@ -11,16 +11,28 @@ def display_chat_history():
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-
 def save_chat_history(filename="chat_history.txt"):
+      # Check if messages exist
+  if not st.session_state.messages:
+    print("No messages to save. Chat history is empty.")
+    return
+
+  # Ensure file path is correct (consider using absolute path)
+  print(f"Saving chat history to: {filename}")
+
+  try:
     with open(filename, "w") as file:
-        for message in st.session_state.messages:
-            file.write(f"{message['role']}: {message['content']}\n")
+      for message in st.session_state.messages:
+        file.write(f"{message['role']}: {message['content']}\n")
+    print("Chat history saved successfully!")
+  except Exception as e:
+    print(f"Error saving chat history: {e}")
+
 
 def main():
-    st.title("Ally-vate")
+ #   st.title("Ally-vate")
     st.subheader("Hello XYZ. This chat session was set in response to your low performance in Test.")
-    st.markdown("#### TABLE ###")
+#  st.markdown("#### TABLE ###")
     st.markdown("We hope for your sincere contribution in this chatting session.\n:red[Your responses will be used for further sessions.]")
     initialize_chat_history()
     display_chat_history()
