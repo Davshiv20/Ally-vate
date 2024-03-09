@@ -12,8 +12,8 @@ def generate_email(usn, domain):
 
 # Function to generate random names
 def generate_name():
-    first_names = ["John", "Jane", "Bob", "Alice", "Charlie", "Eve", "David", "Emma", "Frank", "Grace"]
-    last_names = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"]
+    first_names = ["Lionel", "Cristiano", "Helen", "Karishma", "Anushka", "Virat", "Asap", "Arpit", "Frank", "Taylor"]
+    last_names = ["Messi", "Ronaldo", "Keller", "Khanna", "Rathod", "Kohli", "Rocky", "Bala", "Ocean", "Swift"]
 
     return f"{random.choice(first_names)} {random.choice(last_names)}"
 
@@ -22,7 +22,7 @@ conn = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="university_db",
+    database="VIT_university_db",
 )
 
 # Create a cursor object
@@ -35,7 +35,7 @@ for i in range(1, 11):
     usn = f"1nt21cs{i:03d}"
     name = generate_name()
     semester = 5
-    student_email = generate_email(usn, "nmit.ac.in")
+    student_email = generate_email(usn, "vit.student.ac.in")
     # print(type(student_email))
     # student_email="1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in","1nt21cs198.venkatesh@nmit.ac.in"
     # student_email = ",".join(student_email)    
@@ -52,7 +52,7 @@ insert_student_query = "INSERT INTO students (usn, name, semester, parents_email
 cursor.executemany(insert_student_query, students)
 
 # Insert data into the 'marks' table
-insert_marks_query = "INSERT INTO marks (usn, CN, TOC , Java, Python, IPR) VALUES (%s, %s, %s, %s, %s, %s)"
+insert_marks_query = "INSERT INTO marks (Crypto, SWE, OOPS , Java, Python, ISM) VALUES (%s, %s, %s, %s, %s, %s)"
 cursor.executemany(insert_marks_query, marks_data)  # Use the correct variable
 
 # Commit the changes and close the connection
@@ -64,11 +64,11 @@ ranking()
 ranks=rank()
 for r in ranks:
     if r == "Need Improvement":
-        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://192.168.141.153:8501) \n Ps. This is an automated mail.", "1nt21ad004.aditya@nmit.ac.in")
+        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://192.168.141.153:8501) \n Ps. This is an automated mail.", "shivam.dave2021@vitstudent.ac.in")
 
 
 
-command="streamlit run /Users/adityasinha/Desktop/PROJECT/setmax/PythonFile/code/main.py"
+command="streamlit run C:\Users\Shivam Dave\Desktop\Student-Guidance\chatbot_utils main.py"
 subprocess.run(command,shell=True)
 
 
