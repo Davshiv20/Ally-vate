@@ -1,11 +1,19 @@
-assistant: Did you feel adequately prepared for the exam? 
-user: sadiiahd
+assistant: Were there specific topics or concepts that you struggled with? 
+user: hi 
 assistant: Did you find the material challenging? 
-user: yes it was very challenging
-assistant: Did you use any specific study methods or techniques? 
-user: no i did not
+user: yes, but i am sure what kind of  material they are giving 
+assistant: How did you prepare for the exam? 
+user: maa chudda
+assistant: How did you prepare for the exam? 
+user: meh for one 1 hour, but you know what gand maara
 assistant: Did you ask questions when you were unsure about something? 
-user: no i did not
+user: yolo ek baar
+assistant: Did you ask questions when you were unsure about something? 
+user: yes, i did but teacher didnt respond or wwas too ignorant 
+assistant: Were there any resources that you found particularly helpful or unhelpful? 
+user: nope 
+assistant: Were there any resources that you found particularly helpful or unhelpful? 
+user: nope 
 assistant: Did you use additional resources, such as textbooks, online materials, or tutoring? 
-user: yes i did use coding ninjas
+user: no 
 assistant: Thanks for you valuable Time. 

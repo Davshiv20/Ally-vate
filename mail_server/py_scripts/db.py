@@ -2,8 +2,8 @@ import mysql.connector
 import random
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from ranking import ranking,rank
-from automail import send_email
+from ranks import ranks,rank
+from auto_mailing import send_email
 import subprocess
 import time
 # Function to generate random email addresses
@@ -21,17 +21,17 @@ def generate_name():
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="",
-    database="VIT_university_db",
+    password="Shivamdave@12345678",
+    database="vit_university_db",
 )
 
 # Create a cursor object
 cursor = conn.cursor()
 
-students = []
+students = [] 
 marks_data = []  
 
-for i in range(1, 11):
+for i in range(42, 51):
     usn = f"1nt21cs{i:03d}"
     name = generate_name()
     semester = 5
@@ -52,23 +52,23 @@ insert_student_query = "INSERT INTO students (usn, name, semester, parents_email
 cursor.executemany(insert_student_query, students)
 
 # Insert data into the 'marks' table
-insert_marks_query = "INSERT INTO marks (Crypto, SWE, OOPS , Java, Python, ISM) VALUES (%s, %s, %s, %s, %s, %s)"
+insert_marks_query = "INSERT INTO marks (usn, Crypto, SWE, OOPS , Java, Python) VALUES (%s, %s, %s, %s, %s, %s)"
 cursor.executemany(insert_marks_query, marks_data)  # Use the correct variable
 
 # Commit the changes and close the connection
 conn.commit()
 conn.close()
 
-ranking()
+ranks()
 
-ranks=rank()
-for r in ranks:
+rankos=rank()
+for r in rankos:
     if r == "Need Improvement":
-        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://192.168.141.153:8501) \n Ps. This is an automated mail.", "shivam.dave2021@vitstudent.ac.in")
+        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://172.18.239.190:8501) \n Ps. This is an automated mail.", "vaishnavi.yrathod2021@vitstudent.ac.in")
 
 
+command = "streamlit run C:/Users/Shivam Dave/Desktop/Student-Guidance/chatbot_utils/main.py"
 
-command="streamlit run C:\Users\Shivam Dave\Desktop\Student-Guidance\chatbot_utils main.py"
 subprocess.run(command,shell=True)
 
 
