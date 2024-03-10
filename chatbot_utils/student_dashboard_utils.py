@@ -3,6 +3,7 @@ from gpt4all import GPT4All
 import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from open_ai import call_openai_api
 
 def calculate_cosine_similarity(doc1, doc2):
     # Create CountVectorizer
@@ -252,6 +253,23 @@ def model_bot(prompt):
 def Rephrase():
     phrases="Please Give a Valid answer or try to write complete sentences."
     return str(phrases)
+
+def analyser():
+    prompt = "Based on the given chat between assistant and user find whether the user require further assistance by a mentor and give answer in yes or no only"
+    
+    # Read chat history from file
+    chat_history_file = "C:\\Users\\Shivam Dave\\Desktop\\Student-Guidance\\chatbot_utils\\chat_history.txt"
+    with open(chat_history_file, 'r') as file:
+        content = file.read()
+    
+    prompt = content + "\t" + prompt
+    
+    # Call OpenAI API for analysis
+    output = call_openai_api(prompt)
+    
+    # Display the output within Streamlit
+    st.write(output)
+    
 @st.cache_resource(show_spinner=False)
 def model_loader():
     try :
