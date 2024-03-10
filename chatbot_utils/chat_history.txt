@@ -1,17 +1,9 @@
-assistant: Did you find the material challenging? 
-user: yes i did find it very challenged
-assistant: Did you use any specific study methods or techniques? 
-user: dsfjissdf
-assistant: How much time did you dedicate to studying? 
-user: hardly 1 hour
-assistant: How much time did you dedicate to studying? 
-user: hardly much time and not well
-assistant: Were you actively engaged in class discussions and activities? 
-user: not really
-assistant: Were you actively engaged in class discussions and activities? 
-user: ASJDIAOJDA
-assistant: Were you actively engaged in class discussions and activities? 
-user: yes i was 
-assistant: Did you use additional resources, such as textbooks, online materials, or tutoring? 
-user: yes i did alot of study
+assistant: Hello, hope you are doing well, how did you perceive your preparedness for the exam? Recognizing areas where you felt confident and areas needing improvement can guide future study strategies. 
+user: hi, i think it's going well
+assistant: Describe the study techniques or methods you employed while preparing for the exam. Reflecting on these strategies can help identify effective approaches for future learning endeavors. 
+user: yes i do think that i could have done better
+assistant: Did you encounter any barriers or uncertainties that inhibited your participation in class discussions or activities? Identifying these challenges can help us create a supportive learning environment. 
+user: no i dont think so but okay i think it's okay
+assistant: Reflecting on your use of additional resources, such as textbooks or online materials, can you identify any specific resources that significantly enhanced your understanding of the course material? 
+user: yes i think i can do better
 assistant: Thanks for you valuable Time. 

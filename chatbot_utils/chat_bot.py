@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 import time
+from exit import exit_page
 from student_dashboard_utils import model_bot,model_loader
 # model_loader()
 def d_main():

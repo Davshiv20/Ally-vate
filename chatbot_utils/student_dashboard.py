@@ -1,7 +1,8 @@
 import streamlit as st
 import time
 from student_dashboard_utils import Questionnaire,model_loader,expected_answer,Rephrase
-import chat_bot
+import chat_bot,exit
+from .exit import analyser
 
 def initialize_chat_history():
     if "messages" not in st.session_state:
@@ -30,8 +31,8 @@ def save_chat_history(filename="chat_history.txt"):
 
 
 def main():
- #   st.title("Ally-vate")
-    st.subheader("Hello XYZ. This chat session was set in response to your low performance in Test.")
+    st.title("Ally-vate")
+    st.subheader("Hello Student. This chat session was set in response to your low performance in Test.")
 #  st.markdown("#### TABLE ###")
     st.markdown("We hope for your sincere contribution in this chatting session.\n:red[Your responses will be used for further sessions.]")
     initialize_chat_history()
@@ -111,12 +112,34 @@ def main():
             # Add assistant response to chat history
             st.session_state.messages.append({"role": "assistant", "content": full_response})
     if st.session_state.flag==6:
-        if st.button("Ask Questions related to Acedemics and Career guidance"):
-            st.session_state["current_page"]="chat_bot"
-            save_chat_history()
-            chat_bot.d_main()
+            # generating feedback for student
+        save_chat_history()
+        feedback_=analyser
+        with st.chat_message("assistant"):
+                message_placeholder=st.empty()
+                full_response=""
+                assistant_response=feedback_
+                for chunk in assistant_response:
+                    full_response += chunk + ""
+                    time.sleep(0.05)
+                        # Add a blinking cursor to simulate typing
+                    message_placeholder.markdown(full_response + "")
+                message_placeholder.markdown(full_response)
+                st.session_state.messages.append({"role": "assistant", "content": full_response})
+                st.session_state.flag+=1
+            #sys.exit()
+    if st.session_state.flag==7:
+        exiting=st.button("Exit")
+        if exiting:
+            st.session_state["current_page"]="exit"
+            exit.exit_page()
+            
+        if st.button("Ask Questions related to Academics and Career"):
+                st.session_state["current_page"]="chat_bot"
+                chat_bot.d_main()
+                st.rerun()
     
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     main()
+    main()

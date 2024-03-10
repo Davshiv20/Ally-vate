@@ -31,7 +31,7 @@ cursor = conn.cursor()
 students = [] 
 marks_data = []  
 
-for i in range(42, 51):
+for i in range(61, 72):
     usn = f"1nt21cs{i:03d}"
     name = generate_name()
     semester = 5
@@ -64,7 +64,7 @@ ranks()
 rankos=rank()
 for r in rankos:
     if r == "Need Improvement":
-        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://172.18.239.190:8501) \n Ps. This is an automated mail.", "vaishnavi.yrathod2021@vitstudent.ac.in")
+        send_email("Invitation to Performance Review Session", "Dear Student , \n I hope this email finds you well. As part of our commitment to your academic success, we would like to invite you to a personalized performance review session to discuss your progress and address any concerns or questions you may have \n Follow the link given below (http://172.18.239.190:8501) \n Ps. This is an automated mail.", "asad.aziz2021@vitstudent.ac.in")
 
 
 command = "streamlit run C:/Users/Shivam Dave/Desktop/Student-Guidance/chatbot_utils/main.py"

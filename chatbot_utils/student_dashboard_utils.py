@@ -186,19 +186,18 @@ def expected_answer(index,user_answer):
         return 0
 
 def  Questionnaire(question_number):
-    Understanding_the_Material=["Did you find the material challenging?",
-                                "Were there specific topics or concepts that you struggled with?",
-                                "Did you feel adequately prepared for the exam?"]
+    Understanding_the_Material=["Reflecting on your learning journey, can you share insights into areas where you found the material challenging? Understanding these challenges can help us tailor support to your specific needs.",
+"Were there any specific topics or concepts that prompted you to seek additional clarification or support? Identifying these areas can guide us in providing targeted assistance.",
+"Hello, hope you are doing well, how did you perceive your preparedness for the exam? Recognizing areas where you felt confident and areas needing improvement can guide future study strategies."]
 
-    Study_Habits=["How did you prepare for the exam?",
-                "Did you use any specific study methods or techniques?",
-                "How much time did you dedicate to studying?"]
+    Study_Habits=["Describe the study techniques or methods you employed while preparing for the exam. Reflecting on these strategies can help identify effective approaches for future learning endeavors.",
+"Can you share insights into the amount of time you dedicated to studying? Understanding your study habits can aid in optimizing time management strategies for future assessments."]
 
-    Class_Engagement=["Were you actively engaged in class discussions and activities?",
-                    "Did you ask questions when you were unsure about something?"]
+    Class_Engagement=["Reflecting on your classroom experiences, can you elaborate on instances where active engagement in discussions and activities enriched your learning experience?",
+                    "Did you encounter any barriers or uncertainties that inhibited your participation in class discussions or activities? Identifying these challenges can help us create a supportive learning environment."]
  
-    Resource_Utilization=["Did you use additional resources, such as textbooks, online materials, or tutoring?",
-                        "Were there any resources that you found particularly helpful or unhelpful?"]
+    Resource_Utilization=["Reflecting on your use of additional resources, such as textbooks or online materials, can you identify any specific resources that significantly enhanced your understanding of the course material?",
+                        "Were there any resources that you found less beneficial or challenging to integrate into your study routine? Understanding these challenges can guide us in recommending more suitable resources."]
 
     Time_Management=["Did you feel that you had enough time to complete the exam?",
                     "How did you allocate your time during the exam?"]
